@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Cole Jerum</title>
+    <style>
+        /* reset some default styles */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+            background-color: #2c3e50; /* dark background */
+            color: #ecf0f1; /* light text */
+        }
+        
+        /* header styling */
+        header {
+            background: linear-gradient(to right, #003153, #1c5678); /* prussian blue gradient */
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* main content styling */
+        .content {
+            display: flex;
+            align-items: center;
+            max-width: 1000px;
+            margin: 40px auto; /* center the content */
+            padding: 0 20px; /* padding for small screens */
+        }
+
+        .content img {
+            max-width: 250px;
+            border-radius: 10px; /* rounded corners */
+            margin-right: 30px; /* space between image and text */
+        }
+
+        .bio {
+            line-height: 1.6;
+        }
+
+        .bio a {
+            color: #1abc9c; /* teal link color */
+            text-decoration: none;
+        }
+
+        .bio a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cole Jerum</h1>
+        <nav>
+            <a href="index.html#about">About</a> <!-- Links to the About section -->
+            <a href="research.html">Research</a> <!-- Links to Research section -->
+            <a href="index.html#contact">Contact</a> <!-- Links to Contact section -->
+        </nav>
+    </header>
+    <div class="content" id="about">
+        <img src="your-photo.jpg" alt="Picture of Me">
+        <div class="bio">
+            <p>Hi! My name is Cole Jerum. I'm a Freshman at the University of Rochester with a passion for physics, neuroscience, and music.</p>
+            <p>I am currently involved in research projects</a> at the Extreme State Physics Lab (XSPL), investigating the whimsical behavior of high energy density (HED) plasmas.</p>
+            <p>When I’m not in the lab, you can find me playing piano, spending time with friends, participating in varsity debate, or—most often—studying.</p>
+            <p></p>
+			<p></p>
+
+        </div>
+		
+    </div>
+    <div class="bio" id="research">
+		<p style="margin-left: 400px;">Learn more about my research <a href="research.html">here</a>.</p>
+		<p></p>
+        <p style="margin-left: 400px;">See my resume <a href="abcd.pdf" target="_blank" download class="download-btn">here</a>.</p>
+    </div>

@@ -1,0 +1,195 @@
+<html>
+<head>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        
+        h1, h2, h3 {
+            color: #222;
+        }
+        
+        .project-image {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border: 1px solid #eee;
+            border-radius: 4px;
+        }
+        
+        .section {
+            margin: 40px 0;
+        }
+        
+        .caption {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 10px;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+        
+        .highlight {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+
+        /* New styles for image layout */
+        .image-container {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .image-block {
+            flex: 1;
+        }
+
+        .image-block img {
+            width: 100%;
+            height: auto;
+            margin: 0; /* Override default project-image margin */
+        }
+
+        .image-block .caption {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .image-container {
+                flex-direction: column;
+            }
+            
+            .image-block {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Teleoperated High-precision Optical Repositioner (<b>THOR</b>)</h1>
+    
+    <div class="highlight">
+        <strong>Project Overview:</strong> Development of a motorized control system for precise adjustment of optical components in kinematic mounts, replacing manual knob adjustments with computer-controlled stepper motors while maintaining the mount's inherent stability and precision.
+    </div>
+
+    <div class="section">
+        <h2>Background</h2>
+        <p>Kinematic mounts are precision instruments used in optical setups to hold and adjust mirrors, lenses, and other optical components. The KS2 kinematic mount, used at the XSPL (X-ray Science and Precision Laboratory), provides stable and precise adjustment of optical components through three manual adjustment knobs.</p>
+        
+        <div class="image-container">
+            <div class="image-block">
+                <img src="./image1.png" alt="KS2 Kinematic Mount Diagram" class="project-image">
+                <p class="caption">The KS2 kinematic mount with manual adjustment knobs and a central aperture for optical components.</p>
+            </div>
+            <div class="image-block">
+                <img src="./image2.png" alt="Manual Adjustment Demonstration" class="project-image">
+                <p class="caption">Manual adjustment of a kinematic mount knob, showing the turning motion required for alignment.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <h2>Design Challenge</h2>
+        <p>The primary objectives for this project were:</p>
+        <ul>
+            <li>Convert manual adjustments to motorized control while maintaining precision</li>
+            <li>Preserve the mount's original stability and adjustment range</li>
+            <li>Create a modular design that could be adapted to similar kinematic mounts</li>
+            <li>Ensure smooth motion control without backlash</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Technical Solution</h2>
+        <h3>1. Component Design</h3>
+        <p class="caption">Two crucial 3D printed components: Part A (coupling to stepper motor) and Part B (replacement for manual knob)</p>
+        
+        <p>The solution involves two key custom-designed components:</p>
+        <ul>
+            <li><strong>Part A:</strong> Interfaces with the stepper motor driveshaft, allowing for precise rotational control</li>
+            <li><strong>Part B:</strong> Replaces the original manual adjustment knob, maintaining the original adjustment mechanism</li>
+        </ul>
+
+        <h3>2. Mechanical Integration</h3>
+        <img src="./image3.png" alt="Assembly Diagram" class="project-image">
+        <p class="caption">Integration of Part B with the adjustment screw, secured by a set screw</p>
+        
+        <p>The mechanical integration involves several critical features:</p>
+        <ul>
+            <li>Set screws secure both components to their respective shafts</li>
+            <li>A unique coupling mechanism allows rotational motion transfer while permitting necessary translational movement</li>
+            <li>The design maintains the original adjustment resolution of the mount</li>
+        </ul>
+
+        <h3>3. Motor Mount Design</h3>
+        <img src="./image7.png" alt="Kinematic Mount Adapter" class="project-image">
+        <p class="caption">Custom-designed Kinematic Mount Adapter for secure motor positioning</p>
+        <p>A specialized adapter was designed to:</p>
+        <ul>
+            <li>Securely position the stepper motors</li>
+            <li>Maintain precise alignment with the adjustment mechanism</li>
+            <li>Provide rigid support while minimizing vibration transfer</li>
+        </ul>
+        <img src="./image8.png" alt="Kinematic Mount Adapter" class="project-image">
+        <p class="caption"><b>Motorized</b> adjustment of a kinematic knob</p>
+    </div>
+
+    <div class="section">
+        <h2>Final Implementation</h2>
+        <img src="./image9.png" alt="Final Assembly" class="project-image">
+        <p class="caption">Complete assembly showing three stepper motors integrated with the kinematic mount</p>
+        
+        <div class="highlight">
+            <h3>Key Features:</h3>
+            <ul>
+                <li>Three independent stepper motors for pitch and yaw control</li>
+                <li>Maintained original precision of the kinematic mount</li>
+                <li>Computer-controlled adjustment capability</li>
+                <li>Modular design allowing for easy maintenance</li>
+                <li>Zero-backlash coupling mechanism</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Control System Specifications</h2>
+        <ul>
+            See <a href="project3.html">THOR: Circuitboard design</a>
+
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Applications</h2>
+        <p>This motorized system enables:</p>
+        <ul>
+            <li>Remote adjustment of optical components in sensitive environments</li>
+            <li>Automated alignment procedures</li>
+            <li>Integration with beam-steering algorithms</li>
+            <li>Precise, repeatable adjustments for experimental setups</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Future Developments</h2>
+        <p>Potential improvements and extensions include:</p>
+        <ul>
+            <li>Integration of position feedback sensors</li>
+            <li>Development of automated alignment algorithms</li>
+            <li>Adaptation for different mount sizes and types</li>
+            <li>Implementation of web-based control interface</li>
+        </ul>
+    </div>
+</body>
+</html>
